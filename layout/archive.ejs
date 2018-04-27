@@ -6,24 +6,7 @@
     }
 
     var postList = [];
-    if (page.category) {
-        site.categories.forEach(function(item) {
-            if(item.name === page.category) {
-                postList = item.posts.slice();
-            }
-        });
-        title = page.category;
-    }
-    else if (page.tag) {
-        site.tags.forEach(function(item) {
-            if(item.name === page.tag) {
-                postList = item.posts;
-            }
-        });
-        title = "# " + page.tag;
-    } else {
-        postList = site.posts;
-    }
+    postList = site.posts;
 %>
 
 <!-- Banner -->
@@ -36,7 +19,7 @@
 <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
     <div class="content mw8 center">
         <% var last; %>
-        <% postList.each(function(item){ %>
+        <% postList.sort("date", -1).each(function(item){ %>
             <% var year = item.date.format(theme.archive_date_format); 
                 var date_type;
                if (last == year){ %>
