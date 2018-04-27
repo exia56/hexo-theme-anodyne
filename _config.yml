@@ -2,58 +2,46 @@
 logo_image_source: http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg
 
 # Index Page
-index_banner_text: Welcome to Anodyne
-index_banner_text_secondary: Create Websites. Make Magic.
-index_font_awesome_icon_css: fa fa-magic
+index_banner_text: 極簡部落格
+index_banner_text_secondary: 何謂極簡？懶。
+index_font_awesome_icon_css: fa fa-thumbs-up
 
 # Header
 menu:
-  Home: /
-  Archives: /archives
-  About: /about.html
-  Contact: /contact.html
+  首頁: /
+  歸檔: /archives
+  關於: /about.html
+  聯繫: /contact.html
 
 # Post
 default_post_title: Untitled
 default_post_icon: fa-file-text-o
 
 # Archive Date Format
-archive_date_format: MMM YYYY
+archive_date_format: M/YYYY
 archive_font_awesome_icon_css: fa-folder-open
 
 # About Widget
-about_widget_avatar_url: http://tachyons.io/img/avatar_1.jpg
-about_widget_text: "My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region."
+about_widget_avatar_url: /images/profile.jpg
+about_widget_text: "喜歡將問題分解，各個擊破.<br>喜歡寫容易維護，可讀性佳的程式。<br>喜歡將事情自動化，減少做同樣的事情。"
 
 
 # Comments.
 comments:
   # Disqus comments
-  disqus_shortname: 
+  disqus_shortname: exia56-blog
 
 # Google Analytics Tracking ID
 google_analytics:
 
 # Social Media Platforms
 social_platforms:
-  - url: https://twitter.com/?lang=en
-    fa_icon: fa-twitter
   - url: https://www.facebook.com/
     fa_icon: fa-facebook
-  - url: https://dribbble.com/
-    fa_icon: fa-dribbble 
-  - url: https://github.com/klugjo/hexo-theme-anodyne
+  - url: https://github.com/exia56
     fa_icon: fa-github
-  - url: https://plus.google.com/
-    fa_icon: fa-google-plus
-  - url: https://www.behance.net/
-    fa_icon: fa-behance
-  - url: https://500px.com/
-    fa_icon: fa-500px
-  - url: mailto:test@example.com
+  - url: mailto:exia5693@gmail.com
     fa_icon: fa-envelope
-  - url: /#
-    fa_icon: fa-rss
 
 # Footer about
-footer_about: "@Untitled. All right reserved | Design & Hexo <a class=\"link dim white\" href=\"http://www.codeblocq.com/\">Jonathan Klughertz</a>"
+footer_about: "All right reserved | Design & Hexo <a class=\"link dim white\" href=\"http://www.codeblocq.com/\">Jonathan Klughertz</a>"

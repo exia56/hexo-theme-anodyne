@@ -34,11 +34,30 @@
 }) %>
 
 <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            <% postList.each(function(item){ %>
-                <%- partial('_partial/article-archive', {item: item}) %>
-            <% }); %>
-        </div>
+    <div class="content mw8 center">
+        <% var last; %>
+        <% postList.each(function(item){ %>
+            <% var year = item.date.format(theme.archive_date_format); 
+                var date_type;
+               if (last == year){ %>
+            <% }else { %>
+                   <% if (last != null) {%>
+            </div></div>
+                <% } %>
+            <div class="dt w-100 mb4 center year">
+                <div class="dtc li w-20 tc relative">
+                    <span class="dib f4 fw3 ph2 pv1">
+                        <%= item.date.format(theme.archive_date_format) %>
+                    </span>
+                </div>
+                <div class="dtc w-80">
+               <% }
+               last = year;
+            %>
+            <%- partial('_partial/article-archive', {item: item}) %>
+        <% }); %>
+        <% if(postList.length) {%>
+            </div></div>
+        <% } %>
     </div>
 </div>
