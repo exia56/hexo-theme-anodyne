@@ -1,0 +1,27 @@
+<%
+    var title = '';
+    if (page.tag) {
+        title = '#' + page.tag;
+    }
+    
+    var postList = [];
+    site.tags.forEach((i) =>{
+        if (i.name == page.tag)
+            postList = i.posts;
+    } );
+%>
+
+<!-- Banner -->
+<%- partial('_partial/banner.ejs', {
+    mainText: title,
+    secondaryText: '',
+    faIconCss: theme.tag_font_awesome_icon_css
+}) %>
+
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content mw8 center">
+        <% postList.sort("date", -1).each(function(i){%>
+            <%- partial('_partial/article-tag', {item: i}) %>
+        <% }) %>
+    </div>
+</div>

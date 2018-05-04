@@ -10,20 +10,23 @@ index_font_awesome_icon_css: fa fa-thumbs-up
 menu:
   首頁: /
   歸檔: /archives
-  關於: /about
-  聯繫: /contact.html
+  # 關於: /about
+  # 聯繫: /contact.html
 
 # Post
 default_post_title: Untitled
 default_post_icon: fa-file-text-o
 
 # Archive Date Format
-archive_date_format: M/YYYY
+archive_date_format: M/YY
 archive_font_awesome_icon_css: fa-folder-open
+
+tag_date_format: MMM YYYY
+tag_font_awesome_icon_css: fa-hashtag
 
 # About Widget
 about_widget_avatar_url: /images/profile.jpg
-about_widget_text: "喜歡將問題分解，各個擊破.<br>喜歡寫容易維護，可讀性佳的程式。<br>喜歡將事情自動化，減少做同樣的事情。"
+about_widget_text: "喜歡將問題分解，各個擊破。<br>喜歡寫容易維護，可讀性佳的程式。<br>喜歡將事情自動化，減少做同樣的事情。"
 
 
 # Comments.

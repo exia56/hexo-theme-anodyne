@@ -24,17 +24,17 @@
                 var date_type;
                if (last == year){ %>
             <% }else { %>
-                   <% if (last != null) {%>
+                <% if (last != null) {%>
             </div></div>
                 <% } %>
             <div class="dt w-100 mb4 center year">
                 <div class="dtc li w-20 tc relative">
-                    <span class="dib f4 fw3 ph2 pv1">
+                    <span class="dib f4 fw3">
                         <%= item.date.format(theme.archive_date_format) %>
                     </span>
                 </div>
                 <div class="dtc w-80">
-               <% }
+            <% }
                last = year;
             %>
             <%- partial('_partial/article-archive', {item: item}) %>
