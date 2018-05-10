@@ -6,7 +6,7 @@
 }) %>
 
 <!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l bg-black-20">
+<div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l bg-black-10">
     <div class="content">
         <div class="mw8 center">
             <div class="cf">
@@ -34,7 +34,26 @@
                             <i class="fa fa-tag pr3 text-main-color"></i><%- tags.join(' ') %>
                         </div>
                     <% } %>
-
+                    <% if (page.prev || page.next){ %>
+                    <nav class="bt b--black-20" >
+                    <% if (page.next){ %>
+                        <div class="mv3 fl w-50">
+                        <i class="ma2 fa fa-caret-left"></i><strong class=""><%= __('older') %></strong><br>
+                        <a href="<%- url_for(page.next.path) %>">
+                            <%= page.next.title %>
+                        </a>
+                        </div>
+                    <% } %>
+                    <% if (page.prev){ %>
+                        <div class="mv3 fr tr w-50">
+                        <strong class=""><%= __('newer') %></strong><i class="ma2 fa fa-caret-right"></i><br>
+                        <a href="<%- url_for(page.prev.path) %>">
+                            <%= page.prev.title %>
+                        </a>
+                        </div>
+                    <% } %>
+                    </nav>
+                    <% } %>
                     <!-- Comments -->
                     <%- partial('_partial/comments.ejs') %>
 
