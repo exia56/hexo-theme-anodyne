@@ -18,7 +18,7 @@
     faIconCss: theme.tag_font_awesome_icon_css
 }) %>
 
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+<div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l">
     <div class="content mw8 center">
         <% postList.sort("date", -1).each(function(i){%>
             <%- partial('_partial/article-tag', {item: i}) %>

@@ -12,7 +12,39 @@
 %>
 <!-- Banner -->
 <%- partial('_partial/banner.ejs', {
-    mainText: title || theme.default_post_title || __('default_post_title'),
+    mainText: __(title) || theme.default_post_title || __('default_post_title'),
     secondaryText: '',
-    faIconCss: theme.tag_font_awesome_icon_css
+    faIconCss: page.icon || theme.tag_font_awesome_icon_css
 }) %>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l ">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf ">
+                <div class="fl w-100 w-70-l mw7 fw3 lh-copy post-content">
+                    <%- page.content %>
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <%- partial('_partial/widget-about') %>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    <% if (page.categories && page.categories.length) { %>
+                        <%- partial('_partial/widget-categories', {item: page}) %>
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    <% } %>
+
+                    <!-- Widget 3: Recent Posts -->
+                    <%- partial('_partial/widget-recent-posts') %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

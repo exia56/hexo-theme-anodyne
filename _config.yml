@@ -1,5 +1,5 @@
 # Logo
-logo_image_source: http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg
+logo_image_source: /images/cat.svg
 
 # Index Page
 index_banner_text: 極簡部落格
@@ -10,7 +10,8 @@ index_font_awesome_icon_css: fa fa-thumbs-up
 menu:
   首頁: /
   歸檔: /archives
-  # 關於: /about
+  關於我: /about
+  版權相關: /credit
   # 聯繫: /contact.html
 
 # Post
@@ -18,7 +19,7 @@ default_post_title: Untitled
 default_post_icon: fa-file-text-o
 
 # Archive Date Format
-archive_date_format: M/YY
+archive_date_format: MMM
 archive_font_awesome_icon_css: fa-folder-open
 
 tag_date_format: MMM YYYY

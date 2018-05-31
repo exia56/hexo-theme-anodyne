@@ -12,7 +12,7 @@ body
   background linear-gradient(to right, $gradient-color-1 0%, $gradient-color-2 100%)
 
 .pab-100px
-  padding-bottom 100px
+  padding-top 100px
 
 .w8
   width 64rem
@@ -24,7 +24,7 @@ body
   font-size 30vh
   opacity 0.4
   position absolute
-  bottom -3rem
+  bottom 0rem
   right 6rem
 
 .text-main-color
@@ -50,21 +50,22 @@ body
 
 .li
   span 
+    position: absolute
     width: 4rem
     height: 4rem
+    margin-left: -2rem
     line-height: 4rem
     border-radius: 100%
     background-color: $main-color
     z-index: 1000
-  &:after
+  &:before
     content: ""
     position: absolute
     top: 1rem
     bottom: -1rem
     width: 1rem
-    margin-left: -2.5rem
+    margin-left: -0.5rem
     border-radius: 1rem
     background-color: $main-color
-    z-index: -1
   
 

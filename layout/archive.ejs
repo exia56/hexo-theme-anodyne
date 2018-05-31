@@ -16,8 +16,9 @@
     faIconCss: theme.archive_font_awesome_icon_css
 }) %>
 
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+<div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l">
     <div class="content mw8 center">
+        <div class="pa3">
         <% var last; %>
         <% postList.sort("date", -1).each(function(item){ %>
             <% var year = item.date.format(theme.archive_date_format); 
@@ -42,5 +43,6 @@
         <% if(postList.length) {%>
             </div></div>
         <% } %>
+        </div>
     </div>
 </div>
