@@ -19,30 +19,48 @@
 <div class="w-100 ph2 ph4-m ph5-l pv5 pv6-l">
     <div class="content mw8 center">
         <div class="pa3">
-        <% var last; %>
-        <% postList.sort("date", -1).each(function(item){ %>
-            <% var year = item.date.format(theme.archive_date_format); 
-                var date_type;
-               if (last == year){ %>
-            <% }else { %>
-                <% if (last != null) {%>
-            </div></div>
-                <% } %>
-            <div class="dt w-100 mb4 center year">
-                <div class="dtc li w-20 tc relative">
-                    <span class="dib f4 fw3">
-                        <%= item.date.format(theme.archive_date_format) %>
-                    </span>
+            <% var lastY, lastM; %>
+            <% postList.sort("date", -1).each(function(item){ %>
+                <% var month = item.date.format(theme.archive_date_format); 
+                    var year = item.date.format("YYYY"); 
+                    var date_type;
+                if (lastM == month){ %>
+                <% }else { %>
+                    <% if (lastM != null) {%>
+                    </div>
                 </div>
-                <div class="dtc w-80">
-            <% }
-               last = year;
-            %>
-            <%- partial('_partial/article-archive', {item: item}) %>
-        <% }); %>
-        <% if(postList.length) {%>
-            </div></div>
-        <% } %>
+                    <% } %>
+                    <% if (lastY == null) {%>
+            <div class="w-100 mb4 tc center">
+                <span class="dib pr3 f1 fw3">
+                    <%= year %>
+                </span>
+                <hr class="mb4">
+                    <% } else if (lastY != year) { %>
+            </div>
+            <div class="w-100 mb4 center">
+                <span class="dib f4 fw3">
+                    <%= year %>
+                </span>
+                    <% } %>
+                <div class="dt w-100 mb4 center">
+                    <div class="dtc li w-20 tc relative">
+                        <span class="dib f4 fw3">
+                            <%= item.date.format(theme.archive_date_format) %>
+                        </span>
+                    </div>
+                    <div class="dtc w-80">
+                <% }
+                    lastM = month;
+                    lastY = year;
+                    %>
+                    <%- partial('_partial/article-archive', {item: item}) %>
+            <% }); %>
+            <% if(postList.length) {%>
+                    </div>
+                </div>
+            </div>
+            <% } %>
         </div>
     </div>
 </div>

@@ -1,7 +1,10 @@
 prev: 上一页
 next: 下一页
+newer: 下一篇
+older: 上一篇
 archive_a: 归档
 archive_b: "归档：%s"
 recent_posts: "近期文章"
 categories: "分类"
 default_post_title: "未命名"
+about: "关于我"

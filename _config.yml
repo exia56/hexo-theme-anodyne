@@ -16,14 +16,14 @@ menu:
 
 # Post
 default_post_title: Untitled
-default_post_icon: fa-file-text-o
+default_post_icon: fa fa-file-text-o
 
 # Archive Date Format
 archive_date_format: MMM
-archive_font_awesome_icon_css: fa-folder-open
+archive_font_awesome_icon_css: fas fa-folder-open
 
 tag_date_format: MMM YYYY
-tag_font_awesome_icon_css: fa-hashtag
+tag_font_awesome_icon_css: fas fa-hashtag
 
 # About Widget
 about_widget_avatar_url: /images/profile.jpg
@@ -40,12 +40,12 @@ google_analytics:
 
 # Social Media Platforms
 social_platforms:
-  - url: https://www.facebook.com/
-    fa_icon: fa-facebook
+  - url: https://www.facebook.com/lizhong.yeo
+    fa_icon: fab fa-facebook
   - url: https://github.com/exia56
-    fa_icon: fa-github
+    fa_icon: fab fa-github
   - url: mailto:exia5693@gmail.com
-    fa_icon: fa-envelope
+    fa_icon: fa fa-envelope
 
 # Footer about
-footer_about: "All right reserved | Design & Hexo <a class=\"link dim white\" href=\"http://www.codeblocq.com/\">Jonathan Klughertz</a>"
+footer_about: "All right reserved | Design & Hexo <a class=\"link dim white\" href=\"https://github.com/exia56/exia56.github.io\">Mike Yeo</a>"

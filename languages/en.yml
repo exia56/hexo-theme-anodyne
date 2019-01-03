@@ -1,7 +1,10 @@
 prev: Previous
 next: Next
+newer: Next
+older: Previous
 archive_a: Archives
 archive_b: "Archives: %s"
 recent_posts: "Recent Posts"
 categories: "Categories"
 default_post_title: "Untitled"
+about: "About Me"
